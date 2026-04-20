@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKOUT DATABASE ||  ATHLETIC CENTRE FITNESS HUB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="workoutstyle.css">
+</head>
+<body>
+<script src="workoutscript.js"></script>
+<nav>
+    <a href="index.html" class="logo">ATHLETIC CENTRE FITNESS HUB</a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="workout.html" style="color: var(--accent)">Workouts</a></li>
+        <li><a href="ybmi.html">BMI</a></li>
+        <li><a href="zcontact.html">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="page-title">
+        <h2>TRAINING PROTOCOLS</h2>
+        <p style="color: #555; font-size: 0.8rem; margin-top: 5px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">LOADED EXERCISE SCHEDULE || TRAIN AS PER YOUR NEED</p>
+    </div>
+
+    <div class="filter-nav">
+        <button class="filter-btn active" onclick="filter('all', this)">All Programs</button>
+        <button class="filter-btn" onclick="filter('hypertrophy', this)">Hypertrophy</button>
+        <button class="filter-btn" onclick="filter('cardio', this)">Cardio</button>
+        <button class="filter-btn" onclick="filter('football', this)">Football Athletic</button>
+        <button class="filter-btn" onclick="filter('calisthenics', this)">Calisthenics</button>
+        <button class="filter-btn" onclick="filter('mobility', this)">Mobility</button>
+        <button class="filter-btn" onclick="filter('stability', this)">Stability Core</button>
+        <button class="filter-btn" onclick="filter('women', this)">Women Health</button>
+        <button class="filter-btn" onclick="filter('ankle', this)">Ankle Strengthening</button> 
+    </div>
+
+    <div class="workout-section" id="programGrid">
+        
+        <div class="routine-card" data-cat="hypertrophy">
+            <span class="cat-tag">STRENGTH</span>
+            <h3>01 HYPERTROPHY MAX</h3>
+            <ul class="exercise-list">
+                <li class="exercise-item">Barbell Squats <span>4x8</span></li>
+                <li class="exercise-item">Bench Press <span>4x10</span></li>
+                <li class="exercise-item">Deadlifts <span>3x5</span></li>
+                <li class="exercise-item">Overhead Press <span>3x10</span></li>
+                <li class="exercise-item">Barbell Rows <span>4x10</span></li>
+                <li class="exercise-item">Pull Ups <span>3xAMRAP</span></li>
+                <li class="exercise-item">Dumbbell Lunges <span>3x12</span></li>
+                <li class="exercise-item">Lat Pulldowns <span>3x12</span></li>
+                <li class="exercise-item">Bicep Curls <span>3x15</span></li>
+                <li class="exercise-item">Tricep Dips <span>3x15</span></li>
+            </ul>
+        </div>
+
+        <div class="routine-card" data-cat="cardio">
+            <span class="cat-tag">ENDURANCE</span>
+            <h3>02 CARDIO BLAST</h3>
+            <ul class="exercise-list">
+                <li class="exercise-item">Sprint Intervals <span>10x100m</span></li>
+                <li class="exercise-item">Jump Rope <span>5x2 min</span></li>
+                <li class="exercise-item">Burpees <span>4x20</span></li>
+                <li class="exercise-item">Mountain Climbers <span>4x50</span></li>
+                <li class="exercise-item">Box Jumps <span>3x15</span></li>
+                <li class="exercise-item">Battle Ropes <span>5x45 sec</span></li>
+                <li class="exercise-item">Rowing Machine <span>2000m</span></li>
+                <li class="exercise-item">Cycling Sprints <span>8x1 min</span></li>
+                <li class="exercise-item">Stair Climber <span>15 min</span></li>
+                <li class="exercise-item">Shadow Boxing <span>3x3 min</span></li>
+            </ul>
+        </div>
+
+        <div class="routine-card" data-cat="football">
+            <span class="cat-tag">ATHLETIC</span>
+            <h3>03 FOOTBALL PRO</h3>
+            <ul class="exercise-list">
+                <li class="exercise-item">Agility Ladder <span>5 sets</span></li>
+                <li class="exercise-item">Carioca Drills <span>4x20m</span></li>
+                <li class="exercise-item">Box Drill (Shuttle) <span>4 sets</span></li>
+                <li class="exercise-item">Broad Jumps <span>5x5</span></li>
+                <li class="exercise-item">Lateral Bounds <span>3x10</span></li>
+                <li class="exercise-item">Sled Pushes <span>4x30m</span></li>
+                <li class="exercise-item">Power Cleans <span>5x3</span></li>
+                <li class="exercise-item">Single-Leg RDL <span>3x10</span></li>
+                <li class="exercise-item">Medicine Ball Throws <span>3x12</span></li>
+                <li class="exercise-item">Dead Sprints <span>6x40m</span></li>
+            </ul>
+        </div>
+
+        <div class="routine-card" data-cat="calisthenics">
+            <span class="cat-tag">BODYWEIGHT</span>
+            <h3>04 CALISTHENICS MASTERY</h3>
+            <ul class="exercise-list">
+                <li class="exercise-item">Muscle Ups <span>3x5</span></li>
+                <li class="exercise-item">Diamond Pushups <span>4x20</span></li>
+                <li class="exercise-item">Wide Grip Pullups <span>4x10</span></li>
+                <li class="exercise-item">Pike Pushups <span>3x12</span></li>
+                <li class="exercise-item">Muscle Hang (L-Sit) <span>4x30s</span></li>
+                <li class="exercise-item">Archer Pushups <span>3x10</span></li>
+                <li class="exercise-item">Chin Ups <span>3x12</span></li>
+                <li class="exercise-item">Bodyweight Rows <span>4x15</span></li>
+                <li class="exercise-item">Bulgarian Split Squats <span>3x15</span></li>
+                <li class="exercise-item">Plank To Pushup <span>3x15</span></li>
+            </ul>
+        </div>
+
+        <div class="routine-card" data-cat="mobility">
+            <span class="cat-tag">RECOVERY</span>
+            <h3>05 MOBILITY FLOW</h3>
+            <ul class="exercise-list">
+                <li class="exercise-item">World's Greatest Stretch <span>2x10</span></li>
+                <li class="exercise-item">90/90 Hip Switches <span>2x15</span></li>
+                <li class="exercise-item">Cat-Cow Stretch <span>2x20</span></li>
+                <li class="exercise-item">Thoracic Rotations <span>2x12</span></li>
+                <li class="exercise-item">Deep Squat Hold <span>2 min</span></li>
+                <li class="exercise-item">Scapular Wall Slides <span>3x10</span></li>
+                <li class="exercise-item">Cobra Stretch <span>3x45s</span></li>
+                <li class="exercise-item">Ankle Wall Mobilization <span>2x15</span></li>
+                <li class="exercise-item">Child's Pose <span>2 min</span></li>
+                <li class="exercise-item">Pigeon Stretch <span>1 min/side</span></li>
+            </ul>
+        </div>
+         <div class="routine-card" data-cat="stability">
+            <span class="cat-tag">PROPRIOCEPTION</span>
+            <h3>06 STABILITY CORE</h3>
+            <ul class="exercise-list">
+                <li class="exercise-item">Single-Leg RDL (Weightless) <span>3x12</span></li>
+                <li class="exercise-item">Bird-Dog (Slow Tempo) <span>3x15</span></li>
+                <li class="exercise-item">Pallof Press <span>3x12/side</span></li>
+                <li class="exercise-item">Bosu Ball Squats <span>3x10</span></li>
+                <li class="exercise-item">Dead Bugs <span>3x20</span></li>
+                <li class="exercise-item">Plank with Shoulder Taps <span>4x1 min</span></li>
+                <li class="exercise-item">Side Plank with Leg Lift <span>3x45s</span></li>
+                <li class="exercise-item">Single-Leg Glute Bridge <span>3x15</span></li>
+                <li class="exercise-item">Copenhagen Plank <span>3x30s</span></li>
+                <li class="exercise-item">Farmer's Walk (Unilateral) <span>4x40m</span></li>
+            </ul>
+        </div>
+
+        <div class="routine-card" data-cat="women">
+            <span class="cat-tag">VITALITY</span>
+            <h3>07 WOMEN VITAL FLOW</h3>
+            <ul class="exercise-list">
+                <li class="exercise-item">Goblet Squats <span>3x15</span></li>
+                <li class="exercise-item">Glute Hip Thrusts <span>4x12</span></li>
+                <li class="exercise-item">Dead-Hangs (Decompression) <span>3x30s</span></li>
+                <li class="exercise-item">Lateral Band Walks <span>3x20</span></li>
+                <li class="exercise-item">Kettlebell Swings <span>4x15</span></li>
+                <li class="exercise-item">Dumbbell Renegade Rows <span>3x12</span></li>
+                <li class="exercise-item">Curtsy Lunges <span>3x15</span></li>
+                <li class="exercise-item">Modified Pushups <span>3xAMRAP</span></li>
+                <li class="exercise-item">Stability Ball Pikes <span>3x12</span></li>
+                <li class="exercise-item">Pelvic Tilts / Kegels <span>3x20</span></li>
+            </ul>
+        </div>
+
+        <div class="routine-card" data-cat="ankle">
+            <span class="cat-tag">FOUNDATION</span>
+            <h3>08 ANKLE KINETICS</h3>
+            <ul class="exercise-list">
+                <li class="exercise-item">Tibialis Raises <span>3x20</span></li>
+                <li class="exercise-item">Single-Leg Balance (Eyes Closed) <span>3x1 min</span></li>
+                <li class="exercise-item">Ankle Circles (Controlled) <span>2x20/side</span></li>
+                <li class="exercise-item">Weighted Calf Raises <span>4x15</span></li>
+                <li class="exercise-item">Seated Soleus Raises <span>3x20</span></li>
+                <li class="exercise-item">Resistance Band Dorsiflexion <span>3x15</span></li>
+                <li class="exercise-item">Eversion/Inversion Drills <span>3x12</span></li>
+                <li class="exercise-item">Towel Curls (Foot Intrinsic) <span>3 sets</span></li>
+                <li class="exercise-item">Wall Ankle Mobilization <span>3x12/side</span></li>
+                <li class="exercise-item">Heel-to-Toe Technical Walk <span>2x20m</span></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<footer>ATHLETIC CENTRE FITNESS HUB || COMPLETE WORKOUT PLANNING THAT YOU NEED  </footer>
+
+
+
+
+</body>
+</html>

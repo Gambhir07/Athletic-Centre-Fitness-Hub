@@ -1,0 +1,74 @@
+:root {
+            --accent: #FF003C;
+            --bg: #050505;
+            --surface: #111;
+            --border: 2px solid rgba(255, 255, 255, 0.1);
+            --font-head: 'Syncopate', sans-serif;
+            --font-tech: 'Roboto Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+               background: var(--bg); 
+               color: #fff; 
+               font-family: var(--font-tech); 
+               padding-top: 7rem;
+               min-height: 100vh;
+    
+               background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), 
+                      url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070');
+               background-size: cover;
+               background-position: center;
+               background-attachment: fixed;
+                                    }
+
+        
+        nav {
+            position: fixed; top: 0; width: 100%; padding: 1rem 4rem;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(5, 5, 5, 0.95); border-bottom: var(--border); z-index: 1000;
+        }
+        .logo { font-family: var(--font-head); color: var(--accent); text-decoration: none; font-size: 1.2rem; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: #fff; font-size: 0.75rem; text-transform: uppercase; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+        
+        .page-title { margin-bottom: 3rem; border-left: 5px solid var(--accent); padding-left: 1.5rem; }
+        .page-title h2 { font-family: var(--font-head); font-size: 2rem; }
+
+    
+        .filter-nav { 
+            display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 4rem; 
+            background: #0f0f0f; padding: 15px; border: 1px solid #222;
+        }
+        .filter-btn {
+            background: transparent; border: 1px solid #333; color: #888;
+            padding: 8px 16px; cursor: pointer; font-family: var(--font-tech);
+            font-size: 0.7rem; text-transform: uppercase; transition: 0.2s;
+        }
+        .filter-btn:hover, .filter-btn.active { border-color: var(--accent); color: var(--accent); background: rgba(255, 0, 60, 0.05); }
+
+      
+        .workout-section { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; }
+        
+        .routine-card {
+            background: var(--surface); border: 1px solid #222;
+            padding: 2rem; position: relative; transition: 0.3s;
+        }
+        .routine-card:hover { border-color: var(--accent); }
+        .routine-card h3 { font-family: var(--font-head); font-size: 1rem; color: var(--accent); margin-bottom: 1.5rem; }
+        
+        .exercise-list { list-style: none; }
+        .exercise-item { 
+            font-size: 0.85rem; padding: 8px 0; border-bottom: 1px solid #1a1a1a;
+            display: flex; justify-content: space-between; color: #aaa;
+        }
+        .exercise-item span { color: #555; font-size: 0.75rem; }
+
+        .cat-tag { 
+            position: absolute; top: 10px; right: 10px; font-size: 0.6rem; 
+            color: var(--accent); border: 1px solid var(--accent); padding: 2px 6px;
+        }
+
+        footer { text-align: center; padding: 4rem; color: #333; font-size: 0.7rem; border-top: 1px solid #111; margin-top: 4rem; }
